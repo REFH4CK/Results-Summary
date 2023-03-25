@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+    font-family: 'Hanken Grotesk';
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.sr-only{
+    position: absolute ;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.dashboard-results{
+    display: flex;
+    width: 40rem;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0px 20px 50px hsla(241, 100%, 89%, 0.654);
+}
+
+.left-side-results{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 25rem;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-results{
+    color: #eee;
+    font-size: 1.2rem;
+    opacity: .6;
+    padding-bottom: 1.5rem;
+}
+.circle{
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+}
+.score{
+    color: #eee;
+    font-size: 4rem;
+    padding: 1.5rem 0 0 0;
+    margin: 0;
+    font-weight: bold;
+}
+.of-score{
+    color: #eee;
+    opacity: .3;
+    font-weight: bold;
+    margin: 0;
+}
+.congratulations{
+    color: #eee;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    margin: 0;
+}
+.text-about-score{
+    color: #eee;
+    padding: .5rem 1.5rem;
+    opacity: .7;
+}
+.summary-results{
+    width: 20rem;
+    padding: 1.4rem 2rem;
+}
+.title-summary{
+    text-indent: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: hsl(224, 30%, 27%);
+}
+.summary-results ul{
+    list-style: none;
+}
+.summary-results ul li{
+    background: hsla(221, 100%, 96%, .7);
+    font-size: .9rem;
+    padding: .3rem .6rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    width: 100%;
+}
+.summary-results ul li p .total{
+    float: right;
+    font-weight: bold;
+    color: hsl(224, 30%, 27%);
+}
+.summary-results ul li .reaction{
+    color: hsl(0, 100%, 67%);
+    font-weight: bold;
+    vertical-align: middle;
+}
+.summary-results ul li .reaction::before{
+    content: url(assets/images/icon-reaction.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.summary-results ul li .memory{
+    font-weight: bold;
+    color: hsl(39, 100%, 56%);
+}
+.summary-results ul li .memory::before{
+    content: url(assets/images/icon-memory.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.summary-results ul li .verbal{
+    color: hsl(166, 100%, 37%);
+    font-weight: bold;
+}
+.summary-results ul li .verbal::before{
+    content: url(assets/images/icon-verbal.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.summary-results ul li .visual{
+    font-weight: bold;
+    color: hsl(234, 85%, 45%);
+}
+.summary-results ul li .visual::before{
+    content: url(assets/images/icon-visual.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.summary-results ul li .max{
+    color: hsl(224, 30%, 27%);
+    opacity: .5;
+    font-weight: bold;
+}
+.btn-continue{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    background: hsl(224, 30%, 27%);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+button:hover{
+    background: hsl(241, 81%, 54%);
+}
+
+@media (max-width:661px) {
+    .container{
+        align-items: flex-start;
+    }
+    .dashboard-results{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .left-side-results{
+        border-radius: 0px 0px 30px 30px;
+        width: 100%;
+    }
+    .title-summary{
+        padding-left: 1.3rem;
+    }
+    .text-about-score{
+        padding: 0 7rem;
+    }
+    .summary-results{
+        width: 80vw;
+        padding: 1.4rem 3rem;
+    }
+    .btn-continue{
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+    button{
+        width: 80%;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-bottom: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
